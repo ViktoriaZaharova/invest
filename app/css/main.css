@@ -2306,7 +2306,22 @@ footer {
   .services {
     margin: 0 0 44px; }
   .about {
-    margin: 0; } }
+    margin: 0; }
+  .page-title {
+    font-size: 36px; }
+  .politics .page-title {
+    font-size: 26px; }
+    .politics .page-title:before {
+      bottom: 5px;
+      height: 17px; }
+  .politics {
+    margin: 0 0 40px; }
+  .wrapper_blog {
+    font-size: 14px; }
+    .wrapper_blog p {
+      line-height: 1.4; }
+    .wrapper_blog h4 {
+      font-size: 18px; } }
 
 @media only screen and (max-width: 480px) {
   header .logo {
