@@ -83,12 +83,46 @@ $('.auto-slider').slick({
     variableWidth: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true,
+                dots: false,
+                appendArrows: '.auto-slider__nav'
+            }
+        }
+    ]
 });
 
 $('.carpark-slider').slick({
     slidesToShow: 3,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true,
+                dots: false,
+                appendArrows: '.carpark-slider__nav'
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 3,
+                centerMode: true,
+                variableWidth: true,
+                dots: false,
+                appendArrows: '.carpark-slider__nav'
+            }
+        }
+    ]
 });
 
 
@@ -105,6 +139,14 @@ $("body").on("click", ".btn-scroll-top", function () {
     $("html, body").animate({
         scrollTop: 0
     }, "slow")
+});
+
+$('.menu-close').click(function () {
+   $('.mobile-menu').slideUp();
+});
+
+$('.btn-burger').click(function () {
+    $('.mobile-menu').slideDown();
 });
 
 // Инициализация карты

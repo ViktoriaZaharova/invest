@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -29,6 +30,18 @@
 </head>
 
 <body>
+
+<div class="mobile-menu">
+    <div class="menu-close"></div>
+
+    <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="carpark.html">Автопарк</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
 
 <header>
     <div class="container">
@@ -50,6 +63,12 @@
 </svg>
 </span>
             <span class="text">+7 (911) 307-68-44</span></a>
+
+        <div class="btn-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
 
@@ -95,6 +114,7 @@
     </div>
 </main>
 
+
 <footer>
     <div class="container">
         <div class="footer-box">
@@ -103,8 +123,10 @@
                 <span class="text">Перевозка нефтепродуктов</span>
             </a>
 
-            <p>ООО «Инвест-Проект»</p>
-            <p>ИНН 5190932086</p>
+            <div class="document-attribute">
+                <p>ООО «Инвест-Проект»</p>
+                <p>ИНН 5190932086</p>
+            </div>
         </div>
 
         <div class="footer-box">
@@ -122,11 +144,18 @@
     </div>
 </footer>
 
+<a href="#callback__modal" class="mobile-phone-call open_modal">
+    <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.68284 1.00782L4.50868 0.762256C4.13988 0.685108 3.7565 0.752579 3.43883 0.951935C2.79015 1.35885 1.72795 2.17497 1.25777 3.37857C0.556648 5.17319 0.862388 7.54921 2.19975 10.0834C3.53711 12.6175 6.12 16.7401 11.4252 19.145C13.1347 19.92 14.5902 19.7973 15.7777 19.2751C16.7182 18.8616 17.4419 18.0773 17.8045 17.1209L18.1259 16.2732C18.2281 16.0038 18.1283 15.6992 17.8857 15.54L14.1613 13.0954C13.9195 12.9367 13.6002 12.9646 13.3915 13.1626L11.5154 14.9438C11.3737 15.0784 11.1615 15.1078 10.9877 15.0157C9.96881 14.4754 6.59203 12.4246 5.18617 8.3399C5.12521 8.16274 5.1766 7.96693 5.31934 7.84569L7.08092 6.3514C7.26088 6.19882 7.33702 5.9572 7.27718 5.72909L6.15772 1.45805C6.09812 1.23067 5.91396 1.05617 5.68284 1.00782Z"
+              fill="#FFFFFF"/>
+    </svg>
+</a>
+
 <div class="modal__div" id="callback__modal">
     <div class="modal__wrapper">
         <div class="modal__close"><img src="img/close.svg" alt=""></div>
         <h2>Заполните форму и мы оперативно Вам перезвоним </h2>
-        <div class="description">Детали уточним по телефону</div>
+        <div class="description">Мы оперативно Вам перезвоним. Детали уточним по телефону</div>
 
         <form method="post" class="form">
 
@@ -138,8 +167,7 @@
             <button type="submit" class="btn btn-border">Оставить заявку</button>
         </form>
 
-        <div class="consent">Нажимая на кнопку, Вы принимаете условия <a href="politics.html" class="links-accent">передачи
-            данных</a></div>
+        <div class="consent">Нажимая на кнопку, Вы даете свое согласие на <a href="politics.html" class="links-accent">обработку персональных данных</a></div>
     </div>
 </div>
 
@@ -152,7 +180,7 @@
             <p>Мы перезвоним вам в течении 30 минут</p>
         </div>
 
-        <div class="modal-image"><img src="img/phone-modal.svg" alt=""></div>
+        <div class="modal-image"><div class="img"><img src="img/phone-modal.svg" alt=""></div></div>
 
         <div class="text">
             <p>Если вы опустили ошибку, вернитесь и отправьте форму еще раз</p>
