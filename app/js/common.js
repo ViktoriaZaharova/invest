@@ -71,16 +71,7 @@ $(document).ready(function () {
     });
 });
 
-$(window).scroll(function() {
-    var scroll_picca = $('.about-figures').offset().top;
 
-    if ($(this).scrollTop() > scroll_picca) {
-        $(".wave").show();
-
-    } else{
-        $(".wave").hide();
-    }
-});
 
 $('[name=phone]').mask("+7(999) 999-99-99");
 
@@ -94,6 +85,12 @@ $('.auto-slider').slick({
     nextArrow: '<button type="button" class="slick-next"></button>',
 });
 
+$('.carpark-slider').slick({
+    slidesToShow: 3,
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+});
+
 
 $('.auto-box').fancybox({
     thumbs          : false,
@@ -102,6 +99,12 @@ $('.auto-box').fancybox({
     buttons: [
         "close"
     ],
+});
+
+$("body").on("click", ".btn-scroll-top", function () {
+    $("html, body").animate({
+        scrollTop: 0
+    }, "slow")
 });
 
 // Инициализация карты

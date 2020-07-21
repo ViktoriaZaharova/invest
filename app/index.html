@@ -22,13 +22,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
+
+<div class="mobile-menu">
+    <div class="menu-close"></div>
+
+    <ul class="menu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О нас</a></li>
+        <li><a href="services.html">Услуги</a></li>
+        <li><a href="carpark.html">Автопарк</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+</div>
 
 <header>
     <div class="container">
@@ -240,7 +252,8 @@
 
             <div class="advantages-technics-box">
                 <div class="text">
-                    <p>Водители проходят предрейсовый медицинский контроль перед каждым рейсом по перевозке опасных грузов</p>
+                    <p>Водители проходят предрейсовый медицинский контроль перед каждым рейсом по перевозке опасных
+                        грузов</p>
                 </div>
                 <div class="image"><img src="img/adv5.png" alt=""></div>
             </div>
@@ -258,7 +271,9 @@
 <section class="callback">
     <div class="container">
         <h2>Хотите задать вопрос или сделать заявку?</h2>
-        <div class="description">Оставьте свои данные, мы свяжемся  с Вами, обсудим все детали и проконсультируем по любым вопросам</div>
+        <div class="description">Оставьте свои данные, мы свяжемся с Вами, обсудим все детали и проконсультируем по
+            любым вопросам
+        </div>
 
         <form method="post" class="form w-100">
             <label><input type="text" name="name" placeholder="Как к Вам обращаться?"></label>
@@ -268,7 +283,8 @@
         </form>
 
         <div class="consent">
-            Нажимая на кнопку, Вы даете свое согласие на <a href="politics.html" class="links-accent">обработку персональных данных</a>
+            Нажимая на кнопку, Вы даете свое согласие на <a href="politics.html" class="links-accent">обработку
+            персональных данных</a>
         </div>
     </div>
 </section>
@@ -276,7 +292,7 @@
 <section class="advantages decor-bg">
     <div class="container">
         <h2>Наши преимущества</h2>
-        
+
         <div class="advantages-wrapper w-100">
             <div class="advantages-box">
                 <div class="icon"><img src="img/services-icon1.svg" alt=""></div>
@@ -314,7 +330,7 @@
             <div class="contacts-box contacts-box-address">
                 <div class="icon"><img src="img/marker.svg" alt=""></div>
                 <div class="text">
-                    <p>Мурманская обл., г. Кола,  ш. Кильдинское, д.18</p>
+                    <p>Мурманская обл., г. Кола, ш. Кильдинское, д.18</p>
                     <p>Работаем с 9:00 до 17:00,<br>
                         пн-пт</p>
                 </div>
@@ -368,23 +384,45 @@
 
 <div class="modal__div" id="callback__modal">
     <div class="modal__wrapper">
-        <span class="modal__close"><i class="fa fa-times" aria-hidden="true"></i></span>
-        <h2>Обратный звонок</h2>
+        <div class="modal__close"><img src="img/close.svg" alt=""></div>
+        <h2>Заполните форму и мы оперативно Вам перезвоним </h2>
+        <div class="description">Детали уточним по телефону</div>
 
-        <form method="post" class="callback__form modal-form">
+        <form method="post" class="form">
 
-            <label><input type="text" name="name" placeholder="Ваше имя"></label>
+            <label><input type="text" name="name" placeholder="Как вас зовут?"></label>
 
             <label><input type="text" name="phone" placeholder="Ваш телефон" required></label>
 
-            <label class="label-message"><textarea name="message"
-                                                   placeholder="Введите Ваше сообщение"></textarea></label>
 
-            <button type="submit" class="btn-accent"><span class="wrapper">Отправить</span></button>
+            <button type="submit" class="btn btn-border">Оставить заявку</button>
         </form>
+
+        <div class="consent">Нажимая на кнопку, Вы принимаете условия <a href="politics.html" class="links-accent">передачи
+            данных</a></div>
+    </div>
+</div>
+
+<div class="modal__div" id="thanks__modal">
+    <div class="modal__wrapper">
+        <div class="modal__close"><img src="img/close.svg" alt=""></div>
+        <h2><span>Спасибо за заявку!</span></h2>
+        <div class="description">
+            <p>Ваши данные отправлены.</p>
+            <p>Мы перезвоним вам в течении 30 минут</p>
+        </div>
+
+        <div class="modal-image"><img src="img/phone-modal.svg" alt=""></div>
+        
+        <div class="text">
+            <p>Если вы опустили ошибку, вернитесь и отправьте форму еще раз</p>
+        </div>
     </div>
 </div>
 <div class="overlay"></div><!-- Пoдлoжкa -->
+
+
+<div class="btn-scroll-top"></div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
@@ -392,6 +430,19 @@
 <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
+
+<script>
+    $(window).scroll(function() {
+        var scroll_picca = $('.about-figures').offset().top;
+
+        if ($(this).scrollTop() > scroll_picca) {
+            $(".wave").show();
+
+        } else{
+            $(".wave").hide();
+        }
+    });
+</script>
 
 </body>
 </html>
