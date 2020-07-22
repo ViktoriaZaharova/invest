@@ -184,7 +184,7 @@ h3
   display: flex
   align-items: center
   flex-wrap: wrap
-
+  margin: 0 119px 0 auto
   li
     display: flex
     align-items: center
@@ -213,6 +213,8 @@ h3
 
       &:focus
         color: #B8AF61
+    .current
+      color: #B8AF61
 
 .phone
   font-size: 22px
@@ -504,6 +506,7 @@ header
   .container
     flex-direction: column
     align-items: center
+    max-width: 1310px
 
 .main-list
   width: 100%
@@ -528,6 +531,7 @@ header
       max-width: 309px
 
   &:nth-child(2)
+    margin: 0 0 0 110px
     .text
       max-width: 200px
 
@@ -546,10 +550,11 @@ header
   flex-wrap: wrap
 
 .services-section__image
-  width: 308px
+  width: 430px
 
   .img2
-    margin: -212px -150px -100px 170px
+    margin: -247px -150px -112px 170px
+    width: 340px
 
 .services-section__info
   max-width: 701px
@@ -607,6 +612,8 @@ header
 
   h2
     color: #fff
+
+
 
 .about-figures__content
   display: flex
@@ -687,6 +694,8 @@ header
     text-align: center
     max-width: 941px
     width: 100%
+    span
+      font-weight: 500
 
   .container
     max-width: 1350px
@@ -882,6 +891,7 @@ header
 .advantages-technics-box
   padding: 35px 29px 20px 60px
   font-size: 18px
+  line-height: 28px
   font-weight: 500
   display: flex
   align-items: center
@@ -1094,7 +1104,7 @@ button
 .contacts-info
   background: #22252D
   width: 465px
-  padding: 83px 95px 106px 60px
+  padding: 83px 110px 106px 60px
 
   h2
     font-size: 31px
@@ -1136,6 +1146,7 @@ button
 
   .icon
     margin: 5px 9px 0 0
+
 
 
 .maps
@@ -1214,20 +1225,13 @@ footer
     size: contain
   width: 60px
   height: 60px
-  display: flex
+  display: none
   align-items: center
   justify-content: center
   cursor: pointer
   z-index: 7
   transition: .3s ease
 
-  &:hover
-    background: url("../img/btn-scroll-top-hover.svg") no-repeat center
-      size: contain
-
-  &:focus
-    background: url("../img/btn-scroll-top-focus.svg") no-repeat center
-      size: contain
 
 //contacts-section
 .contacts-section
@@ -1281,6 +1285,8 @@ footer
   display: flex
   align-items: center
   margin: 0 0 49px
+  span
+    margin: 0 14px 0 0
 
 .page-title
   width: auto
@@ -1330,6 +1336,7 @@ footer
 
   .text
     margin: 0 0 32px
+    text-align: justify
     p
       margin: 0 0 20px
       &:last-child
@@ -1433,8 +1440,8 @@ footer
 //about-works
 .about-works
   padding: 117px 0 158px
-  background: linear-gradient(270.25deg, #E7EEF3 1.71%, rgba(231, 238, 243, 0.24) 50.8%, rgba(231, 238, 243, 0) 99.88%), url('../img/bg5.png') no-repeat left center
-    size: 100%
+  background: url('../img/bg5.png') no-repeat left center
+    size: cover
   h2
     text-align: left
     font-size: 34px
@@ -1448,6 +1455,7 @@ footer
   .text
     font-size: 18px
     line-height: 145%
+    text-align: justify
     p
       margin: 0 0 20px
       &:last-child
@@ -1456,15 +1464,16 @@ footer
 //mobile menu
 .mobile-menu
   position: fixed
-  left: 0
+  right: 0
   top: 0
   width: 100%
-  height: 100%
+  height: auto
   overflow-y: auto
   background: rgba(21, 21, 24, 0.97)
   z-index: 7
   padding: 30px 0 0
   display: none
+  max-width: 289px
   .menu
     li
       width: 100%
@@ -1472,7 +1481,7 @@ footer
       &:after
         display: none
       a
-        text-align: center
+        text-align: left
         padding: 21px 20px 21px 43px
         font-size: 14px
         font-weight: 600
@@ -1535,9 +1544,9 @@ footer
     display: inline
 
 .mobile-phone-call
-  position: fixed
-  right: 20px
-  bottom: 130px
+  position: absolute
+  right: 0
+  top: -15px
   z-index: 7
   width: 77px
   height: 77px
@@ -1581,6 +1590,31 @@ footer
   font-size: 28px
   font-family: $serif
   color: #333333
+
+
+.about
+  .page-title
+    margin: 140px 0 39px
+
+.about-works__image
+  width: 100%
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, #F6F6F6 0%, rgba(244, 244, 244, 0.31) 27.6%)
+  img
+    width: 100%
+
+.wrapper
+  display: flex
+  flex-wrap: wrap
+  > section, header, footer, main
+    width: 100%
 
 @import "media"
 // Всегда в конце

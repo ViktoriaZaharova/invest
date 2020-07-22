@@ -210,7 +210,8 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin: 0 119px 0 auto; }
   .menu li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -237,6 +238,8 @@ h3 {
         border-color: #B8AF61; }
       .menu li a:focus {
         color: #B8AF61; }
+    .menu li .current {
+      color: #B8AF61; }
 
 .phone {
   font-size: 22px;
@@ -552,7 +555,8 @@ header {
             flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    max-width: 1310px; }
 
 .main-list {
   width: 100%;
@@ -583,8 +587,10 @@ header {
     margin: 0 0 0 18px; }
   .main-box:last-child .text {
     max-width: 309px; }
-  .main-box:nth-child(2) .text {
-    max-width: 200px; }
+  .main-box:nth-child(2) {
+    margin: 0 0 0 110px; }
+    .main-box:nth-child(2) .text {
+      max-width: 200px; }
 
 .services-section {
   padding: 153px 0 124px; }
@@ -606,9 +612,10 @@ header {
       flex-wrap: wrap; }
 
 .services-section__image {
-  width: 308px; }
+  width: 430px; }
   .services-section__image .img2 {
-    margin: -212px -150px -100px 170px; }
+    margin: -247px -150px -112px 170px;
+    width: 340px; }
 
 .services-section__info {
   max-width: 701px;
@@ -758,6 +765,8 @@ header {
     text-align: center;
     max-width: 941px;
     width: 100%; }
+    .auto .description span {
+      font-weight: 500; }
   .auto .container {
     max-width: 1350px; }
 
@@ -946,6 +955,7 @@ header {
 .advantages-technics-box {
   padding: 35px 29px 20px 60px;
   font-size: 18px;
+  line-height: 28px;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1184,7 +1194,7 @@ button {
 .contacts-info {
   background: #22252D;
   width: 465px;
-  padding: 83px 95px 106px 60px; }
+  padding: 83px 110px 106px 60px; }
   .contacts-info h2 {
     font-size: 31px;
     text-align: left;
@@ -1304,9 +1314,7 @@ footer {
     background-size: contain;
   width: 60px;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1317,12 +1325,6 @@ footer {
   z-index: 7;
   -webkit-transition: .3s ease;
   transition: .3s ease; }
-  .btn-scroll-top:hover {
-    background: url("../img/btn-scroll-top-hover.svg") no-repeat center;
-      background-size: contain; }
-  .btn-scroll-top:focus {
-    background: url("../img/btn-scroll-top-focus.svg") no-repeat center;
-      background-size: contain; }
 
 .contacts-section {
   padding: 0 0 79px; }
@@ -1381,6 +1383,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 0 49px; }
+  .name-company span {
+    margin: 0 14px 0 0; }
 
 .page-title {
   width: auto;
@@ -1434,7 +1438,8 @@ footer {
   color: #000;
   line-height: 145%; }
   .carpark-content .text {
-    margin: 0 0 32px; }
+    margin: 0 0 32px;
+    text-align: justify; }
     .carpark-content .text p {
       margin: 0 0 20px; }
       .carpark-content .text p:last-child {
@@ -1557,8 +1562,8 @@ footer {
 
 .about-works {
   padding: 117px 0 158px;
-  background: linear-gradient(270.25deg, #E7EEF3 1.71%, rgba(231, 238, 243, 0.24) 50.8%, rgba(231, 238, 243, 0) 99.88%), url("../img/bg5.png") no-repeat left center;
-    background-size: 100%; }
+  background: url("../img/bg5.png") no-repeat left center;
+    background-size: cover; }
   .about-works h2 {
     text-align: left;
     font-size: 34px;
@@ -1571,7 +1576,8 @@ footer {
   margin: 0 0 0 auto; }
   .about-works__content .text {
     font-size: 18px;
-    line-height: 145%; }
+    line-height: 145%;
+    text-align: justify; }
     .about-works__content .text p {
       margin: 0 0 20px; }
       .about-works__content .text p:last-child {
@@ -1579,22 +1585,23 @@ footer {
 
 .mobile-menu {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow-y: auto;
   background: rgba(21, 21, 24, 0.97);
   z-index: 7;
   padding: 30px 0 0;
-  display: none; }
+  display: none;
+  max-width: 289px; }
   .mobile-menu .menu li {
     width: 100%;
     margin: 0; }
     .mobile-menu .menu li:after {
       display: none; }
     .mobile-menu .menu li a {
-      text-align: center;
+      text-align: left;
       padding: 21px 20px 21px 43px;
       font-size: 14px;
       font-weight: 600;
@@ -1664,9 +1671,9 @@ footer {
   display: inline; }
 
 .mobile-phone-call {
-  position: fixed;
-  right: 20px;
-  bottom: 130px;
+  position: absolute;
+  right: 0;
+  top: -15px;
   z-index: 7;
   width: 77px;
   height: 77px;
@@ -1717,8 +1724,39 @@ footer {
   font-family: "PT Serif", sans-serif;
   color: #333333; }
 
+.about .page-title {
+  margin: 140px 0 39px; }
+
+.about-works__image {
+  width: 100%;
+  position: relative; }
+  .about-works__image:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F6F6F6), color-stop(27.6%, rgba(244, 244, 244, 0.31)));
+    background: linear-gradient(180deg, #F6F6F6 0%, rgba(244, 244, 244, 0.31) 27.6%); }
+  .about-works__image img {
+    width: 100%; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .wrapper > section, .wrapper header, .wrapper footer, .wrapper main {
+    width: 100%; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1450px) {
+  .about-works {
+    padding: 60px 0; } }
+
 @media only screen and (max-width: 1350px) {
   .advantages-technics-box:nth-child(1) {
     width: 44%; }
@@ -1746,9 +1784,7 @@ footer {
       left: 0; }
   .page-wrapper__image {
     width: 541px;
-    margin: -50px -120px 0 0; }
-  .about-works {
-    padding: 60px 0; } }
+    margin: -50px -120px 0 0; } }
 
 @media only screen and (max-width: 1200px) {
   .btn-scroll-top {
@@ -1758,14 +1794,19 @@ footer {
   .services-section__image {
     width: 270px; }
     .services-section__image .img2 {
-      width: 220px; } }
+      width: 220px;
+      margin: -160px -150px -112px 170px; } }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1060px) {
   .page-wrapper__info {
     width: calc(100% - 321px); }
   .page-wrapper__image {
-    width: 421px; } }
+    width: 421px; }
+  .menu {
+    margin: 0 auto; }
+  .main-box:nth-child(2) {
+    margin: 0; } }
 
 @media only screen and (max-width: 992px) {
   .main-box {
@@ -1790,7 +1831,8 @@ footer {
     width: 280px;
     margin: 98px 40px 30px; }
   .advantages-technics-box {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: normal; }
   .callback .description {
     margin: 20px auto 38px; }
   .callback label {
@@ -1868,7 +1910,9 @@ footer {
       display: none; }
   .about-works__content {
     margin: 46px 0 0;
-    max-width: none; } }
+    max-width: none; }
+  .main-box:nth-child(2) {
+    margin: 0 0 20px; } }
 
 @media only screen and (max-width: 768px) {
   h1, .description-title {
@@ -2149,7 +2193,8 @@ footer {
     background: linear-gradient(105.73deg, #F7F7F7 24.36%, #EAEAEA 71.47%);
     -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2);
-    padding: 71px 0 0; }
+    padding: 71px 0 0;
+    margin: -20px 0 0; }
     .auto .container {
       padding: 0; }
     .auto .description, .auto h2 {
@@ -2321,7 +2366,27 @@ footer {
     .wrapper_blog p {
       line-height: 1.4; }
     .wrapper_blog h4 {
-      font-size: 18px; } }
+      font-size: 18px; }
+  .about .page-title {
+    margin: 64px 0 32px; }
+  .carpark-content .text {
+    text-align: left; }
+  .about-works__content .text {
+    text-align: left; }
+  .carpark-content .text span {
+    font-weight: 600; }
+  footer {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+  .contacts {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  .callback {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media only screen and (max-width: 480px) {
   header .logo {

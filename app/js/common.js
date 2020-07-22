@@ -79,6 +79,7 @@ $('[name=phone]').mask("+7(999) 999-99-99");
 $('.auto-slider').slick({
     slidesToShow: 3,
     dots: true,
+    speed: 300,
     centerMode: true,
     variableWidth: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -99,6 +100,7 @@ $('.auto-slider').slick({
 
 $('.carpark-slider').slick({
     slidesToShow: 3,
+    speed: 300,
     prevArrow: '<button type="button" class="slick-prev"></button>',
     nextArrow: '<button type="button" class="slick-next"></button>',
     responsive: [
@@ -141,6 +143,21 @@ $("body").on("click", ".btn-scroll-top", function () {
     }, "slow")
 });
 
+var btn = $('.btn-scroll-top');
+var mainHeight = $('main').height();
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > mainHeight) {
+        btn.css('display', 'flex');
+    } else {
+        btn.css('display', 'none');
+    }
+});
+btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+});
+
 $('.menu-close').click(function () {
    $('.mobile-menu').slideUp();
 });
@@ -148,6 +165,16 @@ $('.menu-close').click(function () {
 $('.btn-burger').click(function () {
     $('.mobile-menu').slideDown();
 });
+
+// активная ссылка меню
+$('.menu li a').each(function () {
+    var location = window.location.href;
+    var link = this.href;
+    if (location == link) {
+        $(this).addClass('current');
+    }
+});
+// end
 
 // Инициализация карты
 ymaps.ready(init);

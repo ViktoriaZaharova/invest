@@ -3,6 +3,10 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1450px)
+  .about-works
+    padding: 60px 0
+
 @media only screen and (max-width : 1350px)
   .advantages-technics-box:nth-child(1)
     width: 44%
@@ -42,8 +46,7 @@
     width: 541px
     margin: -50px -120px 0 0
 
-  .about-works
-    padding: 60px 0
+
 
 @media only screen and (max-width : 1200px)
   .btn-scroll-top
@@ -58,15 +61,21 @@
 
     .img2
       width: 220px
+      margin: -160px -150px -112px 170px
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1050px)
+@media only screen and (max-width : 1060px)
   .page-wrapper__info
     width: calc(100% - 321px)
 
   .page-wrapper__image
     width: 421px
 
+  .menu
+    margin: 0 auto
+
+  .main-box:nth-child(2)
+    margin: 0
 
 @media only screen and (max-width : 992px)
   .main-box
@@ -101,6 +110,7 @@
 
   .advantages-technics-box
     font-size: 16px
+    line-height: normal
 
   .callback .description
     margin: 20px auto 38px
@@ -205,7 +215,8 @@
     margin: 46px 0 0
     max-width: none
 
-
+  .main-box:nth-child(2)
+    margin: 0 0 20px
 
 @media only screen and (max-width : 768px)
   h1, .description-title
@@ -513,6 +524,7 @@
     background: linear-gradient(105.73deg, #F7F7F7 24.36%, #EAEAEA 71.47%)
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.2)
     padding: 71px 0 0
+    margin: -20px 0 0
     .container
       padding: 0
     .description, h2
@@ -702,7 +714,27 @@
     h4
       font-size: 18px
 
+  .about .page-title
+    margin: 64px 0 32px
+    
+  .carpark-content .text
+    text-align: left
 
+  .about-works__content .text
+    text-align: left
+
+  .carpark-content .text span
+    font-weight: 600
+
+  footer
+    order: 3
+
+  .contacts
+    order: 2
+
+  .callback
+    order: 1
+    
 @media only screen and (max-width : 480px)
   header .logo
     max-width: 38px
